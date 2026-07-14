@@ -37,3 +37,19 @@
 }
 .link:hover { background: rgba(234,27,100,0.06); color: var(--brand-pink); }
 .actions { display: flex; gap: 0.6rem; align-items: center; }
+
+.langBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--brand-blue);
+  text-decoration: none;
+  border: 1px solid rgba(59,131,196,0.06);
+  font-weight: 600;
+}
+.langBtn:hover { background: rgba(59,131,196,0.04); }
+.flag { font-size: 1rem; line-height: 1; }
+.langCode { font-size: 0.85rem; }
