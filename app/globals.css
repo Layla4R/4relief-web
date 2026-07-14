@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-pink: #EA1B64;
+  --brand-blue: #3B83C4;
+  --brand-pink-50: #ffe9ef;
+  --brand-blue-50: #e9f4fb;
 }
 
 @theme inline {

@@ -1,0 +1,7 @@
+.stats { padding: 2rem 1rem; }
+.inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 1rem; justify-content: center; }
+.card { background: white; border-radius: 12px; padding: 1rem 1.25rem; width: 200px; text-align: center; box-shadow: 0 6px 18px rgba(2,6,23,0.04); }
+.value { font-weight: 700; font-size: 1.35rem; color: #0f172a; }
+.label { color: #64748b; margin-top: 0.35rem; font-size: 0.95rem; }
+
+@media (max-width: 720px) { .inner { flex-direction: column; align-items: center; } .card { width: 100%; max-width: 360px; } }

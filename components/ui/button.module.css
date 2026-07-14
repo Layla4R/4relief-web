@@ -1,0 +1,33 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease, opacity 120ms ease;
+  text-decoration: none;
+}
+.button:active { transform: translateY(1px); }
+
+.primary {
+  background: linear-gradient(90deg,var(--brand-pink), var(--brand-blue));
+  color: white;
+  box-shadow: 0 6px 18px rgba(234,27,100,0.12);
+  border: none;
+}
+
+.outline {
+  background: transparent;
+  color: var(--brand-blue);
+  border: 1px solid rgba(59,131,196,0.12);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--brand-pink);
+  border: none;
+  opacity: 0.95;
+}

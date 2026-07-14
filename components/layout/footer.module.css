@@ -1,0 +1,24 @@
+.footer {
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+  border-top: 1px solid rgba(2,6,23,0.04);
+  color: #0f172a;
+  margin-top: 3rem;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.brand { max-width: 260px; }
+.logo { font-weight: 700; font-size: 1.125rem; color: #0f172a; text-decoration: none; }
+.tag { margin-top: 0.5rem; color: #475569; font-size: 0.95rem; }
+.columns { display: flex; gap: 2rem; }
+.columns h4 { margin: 0 0 0.5rem 0; font-size: 0.95rem; }
+.columns ul { list-style: none; padding: 0; margin: 0; }
+.columns li { margin-bottom: 0.4rem; }
+.columns a { color: #334155; text-decoration: none; }
+.bottom { border-top: 1px solid rgba(2,6,23,0.03); padding: 0.75rem 1rem; text-align: center; color: #64748b; font-size: 0.9rem; }
