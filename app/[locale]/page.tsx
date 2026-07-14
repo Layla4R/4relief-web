@@ -1,7 +1,7 @@
-import Hero from "../components/sections/Hero";
-import Stats from "../components/sections/Stats";
-import FeaturedPrograms from "../components/sections/FeaturedPrograms";
-import CallToAction from "../components/sections/CallToAction";
+import Hero from "../../components/sections/Hero";
+import Stats from "../../components/sections/Stats";
+import FeaturedPrograms from "../../components/sections/FeaturedPrograms";
+import CallToAction from "../../components/sections/CallToAction";
 
 export default function Home() {
   return (
