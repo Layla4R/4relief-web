@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Menu } from 'lucide-react';
 import styles from './header.module.css';
 import Button from '../ui/Button';
 
@@ -40,6 +41,7 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
   const base = `/${locale}`;
   const labels = navLabels[locale];
   const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const enHref = isLocale(maybeLocale) ? `/en${rest === '/' ? '' : rest}` : `/en${pathname}`;
@@ -60,6 +62,16 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href={base} className={styles.logo}>4Relief</Link>
+
+        <button
+          type="button"
+          className={styles.menuToggle}
+          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen((prev) => !prev)}
+        >
+          <Menu size={22} aria-hidden="true" />
+        </button>
 
         <nav className={styles.nav} aria-label="Main navigation">
           <Link href={`${base}/about`} className={styles.link}>{labels.about}</Link>
@@ -101,6 +113,24 @@ const Header: React.FC<HeaderProps> = ({ locale }) => {
           <Button variant="primary" href={`${base}/volunteer`}>Join Us</Button>
         </div>
       </div>
+
+      {mobileOpen && (
+        <div className={styles.mobileMenu}>
+          <div className={styles.mobileLangRow}>
+            <Link href={enHref} className={styles.mobileLangButton} onClick={() => setMobileOpen(false)}>EN</Link>
+            <Link href={arHref} className={styles.mobileLangButton} onClick={() => setMobileOpen(false)}>AR</Link>
+          </div>
+          <Link href={`${base}/about`} className={styles.mobileLink} onClick={() => setMobileOpen(false)}>{labels.about}</Link>
+          <Link href={`${base}/projects`} className={styles.mobileLink} onClick={() => setMobileOpen(false)}>{labels.projects}</Link>
+          <Link href={`${base}/news`} className={styles.mobileLink} onClick={() => setMobileOpen(false)}>{labels.news}</Link>
+          <Link href={`${base}/volunteer`} className={styles.mobileLink} onClick={() => setMobileOpen(false)}>{labels.volunteer}</Link>
+          <Link href={`${base}/contact`} className={styles.mobileLink} onClick={() => setMobileOpen(false)}>{labels.contact}</Link>
+          <div className={styles.mobileActions}>
+            <Button variant="ghost" href={`${base}/donate`} className={styles.mobileButton} onClick={() => setMobileOpen(false)}>Donate</Button>
+            <Button variant="primary" href={`${base}/volunteer`} className={styles.mobileButton} onClick={() => setMobileOpen(false)}>Join Us</Button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
