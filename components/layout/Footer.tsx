@@ -2,13 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './footer.module.css';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  locale: 'en' | 'ar';
+}
+
+const Footer: React.FC<FooterProps> = ({ locale }) => {
   const year = new Date().getFullYear();
+  const base = `/${locale}`;
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.brand}>
-          <Link href="/" className={styles.logo}>4Relief</Link>
+          <Link href={base} className={styles.logo}>4Relief</Link>
           <p className={styles.tag}>Supporting communities with transparency and care.</p>
         </div>
 
@@ -16,26 +22,26 @@ const Footer: React.FC = () => {
           <div>
             <h4>Explore</h4>
             <ul>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/projects">Projects</Link></li>
-              <li><Link href="/news">News</Link></li>
+              <li><Link href={`${base}/about`}>About</Link></li>
+              <li><Link href={`${base}/projects`}>Projects</Link></li>
+              <li><Link href={`${base}/news`}>News</Link></li>
             </ul>
           </div>
 
           <div>
             <h4>Get Involved</h4>
             <ul>
-              <li><Link href="/volunteer">Volunteer</Link></li>
-              <li><Link href="/donate">Donate</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href={`${base}/volunteer`}>Volunteer</Link></li>
+              <li><Link href={`${base}/donate`}>Donate</Link></li>
+              <li><Link href={`${base}/contact`}>Contact</Link></li>
             </ul>
           </div>
 
           <div>
             <h4>Legal</h4>
             <ul>
-              <li><Link href="/privacy">Privacy</Link></li>
-              <li><Link href="/terms">Terms</Link></li>
+              <li><Link href={`${base}/privacy`}>Privacy</Link></li>
+              <li><Link href={`${base}/terms`}>Terms</Link></li>
             </ul>
           </div>
         </div>

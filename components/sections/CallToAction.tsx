@@ -2,17 +2,24 @@ import React from 'react';
 import Button from '../ui/Button';
 import styles from './cta.module.css';
 
-const CallToAction: React.FC = () => {
+interface CallToActionProps {
+  heading: string;
+  text: string;
+  volunteerLabel: string;
+  donateLabel: string;
+}
+
+const CallToAction: React.FC<CallToActionProps> = ({ heading, text, volunteerLabel, donateLabel }) => {
   return (
     <section className={styles.cta}>
       <div className={styles.inner}>
         <div>
-          <h3>Want to make a tangible difference?</h3>
-          <p>Join our network of volunteers or support a program with a donation today.</p>
+          <h3>{heading}</h3>
+          <p>{text}</p>
         </div>
         <div className={styles.actions}>
-          <Button href="/volunteer" variant="ghost">Volunteer</Button>
-          <Button href="/donate" variant="primary">Donate</Button>
+          <Button href="/volunteer" variant="ghost">{volunteerLabel}</Button>
+          <Button href="/donate" variant="primary">{donateLabel}</Button>
         </div>
       </div>
     </section>

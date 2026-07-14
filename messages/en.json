@@ -1,0 +1,19 @@
+{
+  "home": {
+    "title": "Welcome to 4Relief",
+    "lead": "4Relief connects communities with resources, volunteers, and transparent support."
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "news": "News",
+    "volunteer": "Volunteer",
+    "contact": "Contact"
+  },
+  "cta": {
+    "donate": "Donate Now",
+    "volunteer": "Become a Volunteer",
+    "heading": "Want to make a tangible difference?",
+    "text": "Join our network of volunteers or support a program with a donation today."
+  }
+}
