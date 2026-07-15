@@ -25,14 +25,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         cardMessages={messages.card}
         programMessages={messages.featured.programs}
       />
-      <div className="max-w-1100 mx-auto px-4">
-        <CallToAction
-          heading={messages.cta.heading}
-          text={messages.cta.text}
-          volunteerLabel={messages.cta.volunteer}
-          donateLabel={messages.cta.donate}
-        />
-      </div>
+      <CallToAction
+        heading={messages.cta.heading}
+        text={messages.cta.text}
+        donateFormMessages={messages.cta.donateForm}
+      />
     </div>
   );
 }

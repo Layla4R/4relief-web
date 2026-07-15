@@ -14,7 +14,19 @@
     "donate": "Donate Now",
     "volunteer": "Become a Volunteer",
     "heading": "Want to make a tangible difference?",
-    "text": "Join our network of volunteers or support a program with a donation today."
+    "text": "Join our network of volunteers or support a program with a donation today.",
+    "donateForm": {
+      "heading": "Donate Now",
+      "lead": "Choose your donation type and amount with confidence.",
+      "oneTime": "One-time",
+      "monthly": "Monthly",
+      "customAmount": "Custom amount",
+      "donateButton": "Donate Now",
+      "featureSecure": "100% Secure & Encrypted Payment",
+      "featureDirect": "Reaches beneficiaries directly",
+      "featureReports": "Monthly transparency reports",
+      "featureCertified": "Internationally certified"
+    }
   },
   "featured": {
     "heading": "Featured Programs",
