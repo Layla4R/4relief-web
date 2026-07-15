@@ -20,7 +20,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         locale={locale}
       />
       <Stats />
-      <FeaturedPrograms />
+      <FeaturedPrograms
+        heading={messages.featured.heading}
+        cardMessages={messages.card}
+        programMessages={messages.featured.programs}
+      />
       <div className="max-w-1100 mx-auto px-4">
         <CallToAction
           heading={messages.cta.heading}

@@ -1,26 +1,50 @@
 import React from 'react';
-import Link from 'next/link';
 import styles from './featured.module.css';
+import Card from '../ui/Card';
 
 const programs = [
-  { title: 'Emergency Kits', desc: 'Rapid distribution of essential supplies.' },
-  { title: 'Water & Sanitation', desc: 'Clean water projects for affected communities.' },
-  { title: 'Community Gardens', desc: 'Local food resilience programs.' },
+  { id: 'foodSupplies', image: '/images/campaigns/food-camp.jpg' },
+  { id: 'medicalAid', image: '/images/campaigns/medical-camp.jpg' },
+  { id: 'shelterTents', image: '/images/campaigns/khyam-camp.jpg' },
 ];
 
-const FeaturedPrograms: React.FC = () => {
+type ProgramMessage = {
+  title: string;
+  desc: string;
+};
+
+type FeaturedProgramsProps = {
+  heading: string;
+  cardMessages: {
+    program: string;
+    fromGoal: string;
+    donors: string;
+    once: string;
+    monthly: string;
+    donateNow: string;
+    noGoal: string;
+  };
+  programMessages: Record<string, ProgramMessage>;
+};
+
+const FeaturedPrograms: React.FC<FeaturedProgramsProps> = ({ heading, cardMessages, programMessages }) => {
   return (
     <section className={styles.featured}>
       <div className={styles.inner}>
-        <h2>Featured Programs</h2>
+        <h2>{heading}</h2>
         <div className={styles.grid}>
           {programs.map((p) => (
-            <article key={p.title} className={styles.card}>
-              <div className={styles.media} aria-hidden>Img</div>
-              <h3>{p.title}</h3>
-              <p>{p.desc}</p>
-              <Link href="/projects" className={styles.link}>Learn more</Link>
-            </article>
+            <Card
+              key={p.id}
+              title={programMessages[p.id].title}
+              category={cardMessages.program}
+              image={p.image}
+              amount={0}
+              goal={50000}
+              raised={0}
+              donors={0}
+              messages={cardMessages}
+            />
           ))}
         </div>
       </div>

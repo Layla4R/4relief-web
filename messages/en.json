@@ -15,5 +15,31 @@
     "volunteer": "Become a Volunteer",
     "heading": "Want to make a tangible difference?",
     "text": "Join our network of volunteers or support a program with a donation today."
+  },
+  "featured": {
+    "heading": "Featured Programs",
+    "programs": {
+      "foodSupplies": {
+        "title": "Food Supplies",
+        "desc": "Emergency food kits for families."
+      },
+      "medicalAid": {
+        "title": "Medical Aid",
+        "desc": "Supplies for field hospitals."
+      },
+      "shelterTents": {
+        "title": "Shelter Tents",
+        "desc": "Temporary shelter and khyam support."
+      }
+    }
+  },
+  "card": {
+    "program": "program",
+    "fromGoal": "from goal",
+    "donors": "donors",
+    "once": "Once",
+    "monthly": "Monthly",
+    "donateNow": "Donate now ♥",
+    "noGoal": "No goal"
   }
 }
